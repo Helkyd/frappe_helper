@@ -209,6 +209,10 @@ def accept(desk_form, data, doc_name=None):
 
 		doc.insert(ignore_permissions=True, ignore_mandatory=ignore_mandatory)
 	else:
+		#HELKYDS 06-10-2024
+		print ('doc ', doc.doctype)
+		print (doc.name)
+		print (doctype)
 		if has_desk_form_permission(doctype, doc.name, "write"):
 			doc.save(ignore_permissions=True)
 		else:

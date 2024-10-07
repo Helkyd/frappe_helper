@@ -11,6 +11,11 @@ import hashlib
 @frappe.whitelist()
 def call(model, name, method, args=None):
     doc = frappe.get_doc(model, name)
+    #HELKYDS 06-10-2024
+    print ('model ', model)
+    print (name)
+    print ('args ', args)
+    
     if args is not None:
         _args = json.loads(args)
         # args = [_args[arg] for arg in _args]
