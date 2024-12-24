@@ -61,6 +61,7 @@ class NumPad {
                         content: `{{text}} ${typeof col.content != "undefined" ? col.content : ""}`,
                         text: __(key),
                     }).on("click", () => {
+                        console.log('frappe helper - num-pad class CLICK ');
                         if (col.action === "enter") {
                             if (this.on_enter != null) {
                                 this.on_enter();
