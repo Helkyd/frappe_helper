@@ -5,6 +5,8 @@
 # Copyright (c) 2015, Frappe Technologies Pvt. Ltd. and contributors
 # For license information, please see license.txt
 
+#Last Modified: 27-01-2025
+
 from __future__ import unicode_literals
 
 import json
@@ -15,7 +17,9 @@ from six.moves.urllib.parse import urlencode
 
 import frappe
 from frappe import _, scrub
-from frappe.core.doctype.file.file import get_max_file_size, remove_file_by_url
+#FIX 27-01-2025; REMOVED get_max_file_size
+#from frappe.core.doctype.file.file import get_max_file_size, remove_file_by_url
+from frappe.core.doctype.file.file import remove_file_by_url
 from frappe.custom.doctype.customize_form.customize_form import docfield_properties
 from frappe.modules.utils import export_module_json, get_doc_module
 from frappe.model.document import Document
